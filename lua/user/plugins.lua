@@ -12,9 +12,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
         install_path,
     }
     print "Installing packer close and reopen Neovim..."
+    vim.cmd [[packadd packer.nvim]]
 end
-
-vim.cmd [[packadd packer.nvim]]
 
 -- Autocommand that reloads neovim when you save the plugins.lua file
 vim.cmd [[
@@ -42,9 +41,25 @@ packer.init {
 -- Install Plugins
 return packer.startup(function(use)
     
+    -- boilerplate
     use "wbthomason/packer.nvim"    -- Have packer manage itself
     use "nvim-lua/popup.nvim"       -- an implementation of Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim"     -- useful lua functions used by lots of plugins
+    
+    -- catppuccin theme
+    use({"catppuccin/nvim", as = "catppuccin"})
+
+    -- cmp plugins
+    use "hrsh7th/nvim-cmp"          -- Completion
+    use "hrsh7th/cmp-buffer"        -- buffer completions
+    use "hrsh7th/cmp-path"          -- path completions
+    use "hrsh7th/cmp-cmdline"       -- cmdline completions
+    use "saadparwaiz1/cmp_luasnip"  -- snippet completions
+
+    -- snippets
+    use "L3MON4D3/LuaSnip"              -- snippet engine
+    use "rafamadriz/friendly-snippets"  -- a bunch of snippets to use
+
 
     -- automatically set up config after cloning packer.vim
     if PACKER_BOOTSTRAP then

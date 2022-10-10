@@ -65,11 +65,24 @@ return packer.startup(function(use)
     use "williamboman/nvim-lsp-installer"   -- simple ls installer
     use "hrsh7th/cmp-nvim-lsp"
 
-    -- telescope
+    -- Telescope
     use {
-        'nvim-telescope/telescope.nvim',
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use "nvim-telescope/telescope-media-files.nvim"
+
+    -- Treesitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
+    }
+    use "nvim-treesitter/playground"
+
+    -- NERDTree
+    use "preservim/nerdtree"
+    use "Xuyuanp/nerdtree-git-plugin"
+    use "tiagofumo/vim-nerdtree-syntax-highlight"
 
   -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then

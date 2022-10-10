@@ -26,7 +26,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- File navigation
-keymap("n", "<leader>e", ":Lex 20<cr>", opts) -- opens lexplore with size 20
+keymap("n", "<leader>e", ":NERDTreeToggle<CR>", opts) 
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -61,4 +62,9 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Telescope --
+keymap("n", "ff", ":Telescope find_files theme=dropdown<CR>", opts)
+keymap("n", "fg", ":Telescope live_grep<CR>", opts)
+keymap("n", "fb", ":Telescope git_branches<CR>", opts)
 

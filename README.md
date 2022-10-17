@@ -1,4 +1,4 @@
-# nvim_lua
+# nvim config
 lua config for neovim
 
 a work in progress

@@ -6,7 +6,7 @@ a work in progress
 Working off this playlist: https://youtube.com/playlist?list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ
 
 # Issues
-2/16/21: The autocommand to download packer does not seem to be working
+[RESOLVED] 2/16/21: The autocommand to download packer does not seem to be working
 
 Use this command to fix it:
 ```

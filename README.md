@@ -13,6 +13,8 @@ Use this command to fix it:
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
  ```
+<br>
+<br>
 
 [RESOLVED] 10/27/22: Issue with deprecation of `cmp_nvim_lsp.update_capabilities()` function used for lsp
 
